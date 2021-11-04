@@ -3,34 +3,32 @@
 
 # Fce otoci retezec
 def otocRetezec(slovo):
-	return slovo[::-1]
+    return slovo[::-1]
 
 # Fce otoci cislo
 def otocCislo(cislo):
-	return int(otocRetezec(str(cislo)))
+    return int(otocRetezec(str(cislo)))
 
 # Fce spocita pocet slov
 def pocetSlov(veta):
-	return len(veta.split())
+    return len(veta.split())
 
 # Fce spocita pocet ruznych slov
 def pocetRuznychSlov(veta):
-	ruznaSlova = []
-	for slovo in veta.split():
-		if slovo.lower() not in ruznaSlova:
-			ruznaSlova.append(slovo.lower())
-			#print(slovo.lower())
-	return len(ruznaSlova)
+    ruznaSlova = []
+    for slovo in veta.split():
+        if slovo.lower() not in ruznaSlova:
+            ruznaSlova.append(slovo.lower())
+    return len(ruznaSlova)
 
 # Fce vyhodnotí výraz se sčítáním (vstup: 12+34+1, vystup: 47)
 def scitani(vyraz):
-	soucet = 0
-	for cislo in vyraz.split('+'):
-		soucet += int(cislo)
-	return soucet
+    soucet = 0
+    for cislo in vyraz.split('+'):
+        soucet += int(cislo)
+    return soucet
 
 slovoTest = 'datel'
-print(otocRetezec(slovoTest))
 print(f"Otoc retezec: {slovoTest} na {otocRetezec(slovoTest)}")
 cisloTest = 123456789
 print(f"Otoc cislo: {cisloTest} na {otocCislo(cisloTest)}")
